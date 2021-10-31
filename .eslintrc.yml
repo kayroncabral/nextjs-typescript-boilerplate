@@ -1,0 +1,60 @@
+env:
+  es6: true
+  browser: true
+  node: true
+settings:
+  react:
+    version: detect
+extends:
+  - standard
+  - plugin:react/recommended
+  - plugin:jsx-a11y/recommended
+plugins:
+  - '@next/next'
+  - react
+  - react-hooks
+  - jsx-a11y
+  - prettier
+  - eslint-plugin-import-helpers
+  - import
+rules:
+  indent: ['off']
+  semi: ['error', 'never']
+  quotes: ['error', 'single']
+  jsx-quotes: ['error', 'prefer-single']
+  no-underscore-dangle: ['off']
+  react/jsx-filename-extension: ['error', { 'extensions': ['.js', '.jsx'] }]
+  react/prop-types: ['off']
+  space-before-function-paren: ['off']
+  multiline-ternary: ['off']
+  import-helpers/order-imports:
+    [
+      'warn',
+      {
+        'newlinesBetween': 'always',
+        groups:
+          [
+            '/^react/',
+            'module',
+            '/^@mui/material/',
+            '/^@mui/lab/',
+            '/^@mui/icons-material/',
+            '/^@mui/styles/',
+            '/^icons/',
+            '/^components/',
+            '/^dialogs/',
+            '/^routes/',
+            '/^containers/',
+            '/^pages/',
+            '/^contexts/',
+            '/^forms/',
+            '/^hooks/',
+            '/^services/',
+            '/^utils/',
+            '/^theme/',
+            '/^styles/',
+            ['parent', 'sibling', 'index']
+          ],
+        alphabetize: { order: 'asc', ignoreCase: true }
+      }
+    ]
