@@ -5,12 +5,14 @@ env:
 settings:
   react:
     version: detect
+parser: '@typescript-eslint/parser'
 extends:
   - standard
   - plugin:react/recommended
   - plugin:jsx-a11y/recommended
 plugins:
   - '@next/next'
+  - '@typescript-eslint'
   - react
   - react-hooks
   - jsx-a11y
@@ -18,20 +20,21 @@ plugins:
   - eslint-plugin-import-helpers
   - import
 rules:
-  indent: ['off']
+  indent: off
   semi: ['error', 'never']
   quotes: ['error', 'single']
   jsx-quotes: ['error', 'prefer-single']
-  no-underscore-dangle: ['off']
-  react/jsx-filename-extension: ['error', { 'extensions': ['.js', '.jsx'] }]
-  react/prop-types: ['off']
-  space-before-function-paren: ['off']
-  multiline-ternary: ['off']
+  no-underscore-dangle: off
+  react/jsx-filename-extension: ['error', { 'extensions': ['.js', '.jsx', '.ts', '.tsx'] }]
+  react/prop-types: off
+  space-before-function-paren: off
+  multiline-ternary: off
+  no-use-before-define: off
   import-helpers/order-imports:
     [
       'warn',
       {
-        'newlinesBetween': 'always',
+        newlinesBetween: 'always',
         groups:
           [
             '/^react/',
