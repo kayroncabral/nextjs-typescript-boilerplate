@@ -52,9 +52,12 @@ rules:
             '/^contexts/',
             '/^forms/',
             '/^hooks/',
+            '/^graphql/',
             '/^services/',
+            '/^assets/',
             '/^utils/',
             '/^theme/',
+            '/^types/',
             '/^styles/',
             ['parent', 'sibling', 'index']
           ],
